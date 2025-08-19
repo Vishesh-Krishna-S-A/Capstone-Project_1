@@ -1,0 +1,58 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+
+/* General CSS */
+:root {
+	--primary-color: #ff511a;
+	--secondary-color: #43ba7f;
+	--text-color: #212741;
+	--bg-color: #fff;
+	--link-color: #e36402;
+	--dark-bg-color: #181d30;
+}
+
+/* CSS */
+body {
+	background: var(--bg-color);
+	color: var(--text-color);
+	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
+}
+
+/* Header */
+header {
+	background-color: rgb(81, 101, 101);
+}
+a {
+    text-decoration: none !important;
+}
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+.logo img {
+	height: 6rem;
+	border-radius: 50%;
+}
+.navlist {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 2rem;
+}
+.navlist li a {
+	text-decoration: none;
+	color: var(--bg-color);
+	font-weight: 300;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.navlist li a:hover,
+.navlist li a.active {
+	color: var(--link-color);
+}
+/* Hero */
