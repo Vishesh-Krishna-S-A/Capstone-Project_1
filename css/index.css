@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-	background-color: rgb(103, 116, 116);
+	background-color: #7f7d7d;
 }
 .main-nav {
 	display: flex;
@@ -31,7 +31,7 @@ header {
 	gap: 2rem;
 }
 .logo img {
-	height: 6rem;
+	height: 6.5rem;
 	border-radius: 50%;
 }
 .navlist {
@@ -45,8 +45,9 @@ header {
 	text-decoration: none;
 	color: var(--bg-color);
 	font-weight: 300;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	transition: all 0.3s ease;
+	white-space: nowrap;
 }
 .navlist li a:hover,
 .navlist li a.active {
@@ -56,28 +57,122 @@ header {
 	display: none;
 }
 
-@media screen and (max-width: 768px) {
-	/* header */
-	.logo img {
-		height: 4rem;
+/* Hero */
+.hero {
+	background: url("../assets/images/hero-bg.jpg") no-repeat;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	animation: slide-in 1.25s ease-out forwards;
+	color: var(--bg-color);
+}
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateY(-5%);
 	}
-	.navlist li a {
-		font-size: 0.8rem;
-		white-space: nowrap;
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
+}
+.hero-content {
+	padding: 4rem 1.5rem;
+	width: 50%;
+}
+.highlight {
+	color: var(--primary-color);
+	font-style: normal;
+}
+.hero-title {
+	font-size: 4.5rem;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.divider {
+	width: 8rem;
+	height: 0.4rem;
+	background-color: var(--bg-color);
+	border-radius: 0.2rem;
+	margin: 3.5rem 0;
+}
+.hero-message {
+	font-size: 1.3rem;
+}
 
-	@media screen and (max-width: 576px) {
-		.navlist {
-			display: none;
+@media screen and (max-width: 1270px) {
+	/* hero */
+	.hero-content {
+		width: 65%;
+	}
+	@media screen and (max-width: 992px) {
+		/* Header */
+		.logo img {
+			height: 5rem;
 		}
 		.navlist li a {
 			font-size: 0.9rem;
+			white-space: nowrap;
 		}
-		.hamburger-menu {
-			display: block;
-			cursor: pointer;
-			margin: 1rem 1rem 1rem auto;
+		/* hero */
+		.hero-content {
+			width: 100%;
+			text-align: center;
+		}
+		.hero-title {
+			font-size: 3rem;
+		}
+		.divider {
+			margin: 2rem auto;
+		}
+		.hero-message {
+			font-size: 1rem;
+		}
+		@media screen and (max-width: 768px) {
+			/* Header */
+			.logo img {
+				height: 4rem;
+			}
+			.navlist li a {
+				font-size: 0.8rem;
+				white-space: nowrap;
+			}
+			/* hero */
+			.hero-title {
+				font-size: 2.5rem;
+			}
+			.divider {
+				width: 10rem;
+			}
+			.hero-message {
+				font-size: 0.9rem;
+			}
+			@media screen and (max-width: 576px) {
+				/* Header */
+				.navlist {
+					display: none;
+				}
+				.navlist li a {
+					font-size: 0.85rem;
+				}
+				.hamburger-menu {
+					display: block;
+					cursor: pointer;
+					margin: 1rem 1rem 1rem auto;
+				}
+				/* hero */
+				.hero-content {
+					margin: auto;
+					width: 70%;
+				}
+				.hero-title {
+					font-size: 2rem;
+				}
+				.divider,
+				.hero-message {
+					display: none;
+				}
+			}
 		}
 	}
 }
-/* Hero */
