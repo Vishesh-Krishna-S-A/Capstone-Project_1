@@ -36,23 +36,58 @@
 	</head>
 
 	<body id="home">
-		<!-- HEADER/NAVBAR -->
+		<!-- HEADER -->
 		<header>
+			<!-- Navbar -->
 			<div class="container">
 				<nav class="main-nav">
-					<!-- Logo -->
+					<!-- logo -->
 					<div class="logo">
 						<img src="assets/images/logo.jpg" alt="Company Logo" />
 					</div>
-					<!-- Navigation List -->
-					<ul class="navlist">
+					<!-- navigation list -->
+					<ul class="navlist" id="navlist">
 						<li><a href="#home" class="active">Home</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#testimonials">Testimonials</a></li>
 						<li><a href="#contact">Contact Support</a></li>
 					</ul>
+					<!-- handburger menu for sm screens -->
+					<div class="hamburger-menu">
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navlist"
+							aria-controls="navlist"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<i class="fa-solid fa-bars fs-5"></i>
+						</button>
+					</div>
 				</nav>
+			</div>
+			<!-- Collapsable Navigation -->
+			<div class="collapse navbar-collapse bg-dark" id="navlist">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link text-white text-center active" aria-current="page" href="#top">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white text-center" href="#services">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white text-center" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white text-center" href="#testimonials">Testimonials</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white text-center" href="#contact">Contact Support</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 		<!-- HERO -->
