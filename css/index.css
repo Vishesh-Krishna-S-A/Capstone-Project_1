@@ -21,16 +21,14 @@ body {
 
 /* Header */
 header {
-	background-color: rgb(81, 101, 101);
-}
-a {
-    text-decoration: none !important;
+	background-color: rgb(103, 116, 116);
 }
 .main-nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 0;
+	gap: 2rem;
 }
 .logo img {
 	height: 6rem;
@@ -50,9 +48,36 @@ a {
 	font-size: 1rem;
 	transition: all 0.3s ease;
 }
-
 .navlist li a:hover,
 .navlist li a.active {
-	color: var(--link-color);
+	color: var(--link-color) !important;
+}
+.hamburger-menu {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	/* header */
+	.logo img {
+		height: 4rem;
+	}
+	.navlist li a {
+		font-size: 0.8rem;
+		white-space: nowrap;
+	}
+
+	@media screen and (max-width: 576px) {
+		.navlist {
+			display: none;
+		}
+		.navlist li a {
+			font-size: 0.9rem;
+		}
+		.hamburger-menu {
+			display: block;
+			cursor: pointer;
+			margin: 1rem 1rem 1rem auto;
+		}
+	}
 }
 /* Hero */
