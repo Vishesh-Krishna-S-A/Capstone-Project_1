@@ -10,16 +10,29 @@
 	--link-color: #e36402;
 	--dark-bg-color: #181d30;
 }
-
-/* CSS */
 body {
 	background: var(--bg-color);
 	color: var(--text-color);
 	font-family: "Poppins", sans-serif;
 	overflow-x: hidden;
 }
+.section-heading {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.section-heading h6 {
+	color: var(--primary-color);
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+.section-heading h3 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
 
-/* Header */
+/* header */
 header {
 	background-color: #7f7d7d;
 }
@@ -100,79 +113,194 @@ header {
 	font-size: 1.3rem;
 }
 
+/* Services */
+.services {
+	padding: 3.5rem 0;
+}
+.service-item {
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	border-radius: 0.625rem;
+	margin-top: 1.5rem;
+	padding: 2.5rem;
+	width: 95%;
+	display: grid;
+	grid-template-areas:
+		"heading icon"
+		"description icon";
+	column-gap: 1rem;
+}
+.service-item h4 {
+	grid-area: heading;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.service-item p {
+	grid-area: description;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+.service-item i {
+	grid-area: icon;
+	font-size: 4rem;
+	color: var(--primary-color);
+	align-self: center;
+	justify-self: center;
+}
+.services i:hover {
+	transform: scale(1.2);
+	transition: all 0.3s ease;
+}
+
+/* Media Queries */
 @media screen and (max-width: 1270px) {
+	/* GENERAL CSS */
+	.section-heading h6 {
+		font-size: 1.1rem;
+	}
+	.section-heading h3 {
+		font-size: 2.2rem;
+	}
 	/* hero */
 	.hero-content {
 		width: 65%;
 	}
-	@media screen and (max-width: 992px) {
-		/* Header */
-		.logo img {
-			height: 5rem;
-		}
-		.navlist li a {
-			font-size: 0.9rem;
-			white-space: nowrap;
-		}
-		/* hero */
-		.hero-content {
-			width: 100%;
-			text-align: center;
-		}
-		.hero-title {
-			font-size: 3rem;
-		}
-		.divider {
-			margin: 2rem auto;
-		}
-		.hero-message {
-			font-size: 1rem;
-		}
-		@media screen and (max-width: 768px) {
-			/* Header */
-			.logo img {
-				height: 4rem;
-			}
-			.navlist li a {
-				font-size: 0.8rem;
-				white-space: nowrap;
-			}
-			/* hero */
-			.hero-title {
-				font-size: 2.5rem;
-			}
-			.divider {
-				width: 10rem;
-			}
-			.hero-message {
-				font-size: 0.9rem;
-			}
-			@media screen and (max-width: 576px) {
-				/* Header */
-				.navlist {
-					display: none;
-				}
-				.navlist li a {
-					font-size: 0.85rem;
-				}
-				.hamburger-menu {
-					display: block;
-					cursor: pointer;
-					margin: 1rem 1rem 1rem auto;
-				}
-				/* hero */
-				.hero-content {
-					margin: auto;
-					width: 70%;
-				}
-				.hero-title {
-					font-size: 2rem;
-				}
-				.divider,
-				.hero-message {
-					display: none;
-				}
-			}
-		}
+	/* services */
+	.service-item {
+		width: 100%;
+		column-gap: 1.2rem;
+	}
+	.service-item h4 {
+		font-size: 1.8rem;
+	}
+	.service-item p {
+		font-size: 1.1rem;
+	}
+	.service-item i {
+		font-size: 3.5rem;
+	}
+	.service-item i:hover {
+		transform: scale(1.1);
+	}
+}
+@media screen and (max-width: 992px) {
+	/* GENERAL CSS */
+	.section-heading h6 {
+		font-size: 1rem;
+	}
+	.section-heading h3 {
+		font-size: 2rem;
+	}
+	/* header */
+	.logo img {
+		height: 5rem;
+	}
+	.navlist li a {
+		font-size: 0.9rem;
+		white-space: nowrap;
+	}
+	/* hero */
+	.hero-content {
+		width: 100%;
+		text-align: center;
+	}
+	.hero-title {
+		font-size: 3rem;
+	}
+	.divider {
+		margin: 2rem auto;
+	}
+	.hero-message {
+		font-size: 1rem;
+	}
+	/* services */
+	.service-item h4 {
+		font-size: 1.5rem;
+	}
+	.service-item p {
+		font-size: 0.95rem;
+	}
+	.service-item i {
+		font-size: 3rem;
+	}
+	.service-item i:hover {
+		transform: scale(1.05);
+	}
+}
+@media screen and (max-width: 768px) {
+	/* GENERAL CSS */
+	.section-heading h6 {
+		font-size: 0.9rem;
+	}
+	.section-heading h3 {
+		font-size: 1.8rem;
+	}
+	/* header */
+	.logo img {
+		height: 4rem;
+	}
+	.navlist li a {
+		font-size: 0.8rem;
+		white-space: nowrap;
+	}
+	/* hero */
+	.hero-title {
+		font-size: 2.5rem;
+	}
+	.divider {
+		width: 10rem;
+	}
+	.hero-message {
+		font-size: 0.9rem;
+	}
+	/* services */
+	.service-item {
+		width: 100%;
+		padding: 1.5rem;
+		grid-template-areas:
+			"icon"
+			"heading"
+			"description";
+        column-gap: 0;
+        text-align: center;
+	}
+	.service-item h4 {
+		font-size: 1.3rem;
+	}
+	.service-item p {
+		font-size: 0.9rem;
+	}
+	.service-item i {
+		font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+	}
+    .service-item i:hover {
+        transform: scale(1.15);
+    }
+}
+@media screen and (max-width: 576px) {
+	/* header */
+	.navlist {
+		display: none;
+	}
+	.navlist li a {
+		font-size: 0.85rem;
+	}
+	.hamburger-menu {
+		display: block;
+		cursor: pointer;
+		margin: 1rem 1rem 1rem auto;
+	}
+	/* hero */
+	.hero-content {
+		margin: auto;
+		width: 70%;
+	}
+	.hero-title {
+		font-size: 2rem;
+	}
+	.divider,
+	.hero-message {
+		display: none;
 	}
 }
