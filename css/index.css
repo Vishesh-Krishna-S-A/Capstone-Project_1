@@ -159,7 +159,7 @@ header {
 	background-position: center;
 	background-size: cover;
 	padding: 5rem;
-	height: 30vh;
+	/* height: 30vh; */
 	text-align: center;
 	align-items: center;
 }
@@ -203,6 +203,9 @@ header {
 	background-color: var(--primary-color);
 }
 
+
+
+/* --------------- */
 /* Media Queries */
 @media screen and (max-width: 1270px) {
 	/* GENERAL CSS */
@@ -219,6 +222,7 @@ header {
 	/* services */
 	.service-item {
 		width: 100%;
+		height: 85%;
 		column-gap: 1.2rem;
 	}
 	.service-item h4 {
@@ -232,6 +236,14 @@ header {
 	}
 	.service-item i:hover {
 		transform: scale(1.1);
+	}
+	/* banner */
+	.banner h4 {
+		font-size: 2.3rem;
+	}
+	.banner .buttons a {
+		font-size: 1.1rem;
+		padding: 0.85rem 1.9rem;
 	}
 }
 @media screen and (max-width: 992px) {
@@ -278,6 +290,9 @@ header {
 		transform: scale(1.05);
 	}
 	/* banner */
+	.banner {
+		row-gap: 2rem;
+	}
 	.banner h4 {
 		font-size: 2.2rem;
 	}
@@ -374,5 +389,9 @@ header {
 	}
 	.service-item p {
 		font-size: 0.85rem;
+	}
+	/* banner */
+	.banner .buttons {
+		text-wrap: nowrap;
 	}
 }
