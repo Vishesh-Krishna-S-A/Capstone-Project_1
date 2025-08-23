@@ -115,7 +115,7 @@ header {
 
 /* Services */
 .services {
-	padding: 3.5rem 0;
+	padding: 4rem 0;
 }
 .service-item {
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -150,6 +150,56 @@ header {
 .services i:hover {
 	transform: scale(1.2);
 	transition: all 0.3s ease;
+}
+
+/* Banner */
+.banner {
+	background: url("../assets/images/banner-bg.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 5rem;
+	height: 30vh;
+	text-align: center;
+	align-items: center;
+}
+.banner h4 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--bg-color);
+	line-height: 3rem;
+}
+.banner h4 em {
+	font-style: normal;
+	color: var(--secondary-color);
+}
+.banner h4 strong {
+	font-weight: 700;
+	color: var(--primary-color);
+}
+.banner .buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+.btn a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: var(--bg-color);
+	padding: 0.9rem 2rem;
+	border-radius: 0.625rem;
+	transition: all 0.3s;
+}
+.btn a:hover {
+	opacity: 0.9;
+	padding: 1rem 2.1rem;
+}
+.btn1 a {
+	color: var(--primary-color);
+	background-color: var(--bg-color);
+}
+.btn2 a {
+	color: var(--bg-color);
+	background-color: var(--primary-color);
 }
 
 /* Media Queries */
@@ -225,6 +275,14 @@ header {
 	}
 	.service-item i:hover {
 		transform: scale(1.05);
+	}
+	/* banner */
+	.banner h4 {
+		font-size: 2.2rem;
+	}
+	.banner .buttons a {
+		font-size: 1rem;
+		padding: 0.8rem 1.8rem;
 	}
 }
 @media screen and (max-width: 768px) {
