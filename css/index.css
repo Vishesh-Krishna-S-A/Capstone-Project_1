@@ -94,7 +94,7 @@ header {
 	}
 }
 .hero-content {
-	padding: 4rem 1.5rem;
+	padding: 1.5rem 1.5rem;
 	width: 50%;
 }
 .highlight {
@@ -203,9 +203,37 @@ header {
 	background-color: var(--primary-color);
 }
 
+/* About us */
+.details {
+	text-align: center;
+}
+.btn span {
+	font-size: 1.1rem;
+}
+.course-list {
+	margin-top: 2rem;
+	text-align: left;
+	list-style: none;
+	padding: 0 1rem;
+}
+.course-list li {
+	display: flex;
+	padding: 1rem;
+}
+.course-list li span {
+	flex: 1;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+.list-heading,
+.course-name {
+	font-weight: 600;
+}
+.course-name {
+	color: var(--secondary-color) !important;
+}
 
-
-/* --------------- */
+/* ------- Responsiveness ------- */
 /* Media Queries */
 @media screen and (max-width: 1270px) {
 	/* GENERAL CSS */
@@ -300,6 +328,10 @@ header {
 		font-size: 1rem;
 		padding: 0.8rem 1.8rem;
 	}
+	/* about us */
+	.course-list {
+		text-align: center;
+	}
 }
 @media screen and (max-width: 768px) {
 	/* GENERAL CSS */
@@ -351,6 +383,10 @@ header {
 	.service-item i:hover {
 		transform: scale(1.15);
 	}
+	/* banner */
+	.banner .buttons a {
+		text-wrap: nowrap;
+	}
 }
 @media screen and (max-width: 576px) {
 	/* header */
@@ -358,7 +394,7 @@ header {
 		display: none;
 	}
 	.navlist li a {
-		font-size: 0.85rem;
+		font-size: 0.7rem;
 	}
 	.hamburger-menu {
 		display: block;
@@ -390,8 +426,8 @@ header {
 	.service-item p {
 		font-size: 0.85rem;
 	}
-	/* banner */
-	.banner .buttons {
-		text-wrap: nowrap;
+	/* about */
+	.course-list li {
+		flex-direction: column;
 	}
 }
