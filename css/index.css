@@ -301,6 +301,69 @@ header {
 	padding-right: 2.2rem;
 }
 
+/* testimonials */
+.testimonials {
+	width: 95%;
+	margin: 0 auto;
+}
+.testimonial-card {
+	display: grid;
+	grid-template-areas: "t-content t-image";
+	background-color: var(--bg-color);
+	box-shadow: 0 0 1rem #4a0d0d1a;
+	border: 2px solid #f1e6e6;
+	border-radius: 1rem;
+	margin: 1.5rem 0;
+	padding: 2.5rem;
+	gap: 3rem;
+}
+.testimonial-content {
+	grid-area: t-content;
+}
+.testimonial-content i {
+	color: var(--bg-color);
+	background-color: var(--primary-color);
+	font-size: 3vw;
+	padding: 1rem;
+	border-radius: 0.9rem;
+	margin-bottom: 1.5rem;
+}
+.review {
+	color: var(--text-color);
+	font-size: 1.4vw;
+	font-style: italic;
+	margin-bottom: 1.5rem;
+}
+.reviewer {
+	color: var(--dark-bg-color);
+	font-size: 1.6vw;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+.testimonials .designation {
+	color: var(--primary-color);
+	font-size: 1.2vw;
+}
+.image-container {
+	grid-area: t-image;
+}
+.reviewer-image {
+	width: 16vw;
+	height: 18vw;
+	border-radius: 0.9rem;
+	object-fit: cover;
+}
+.carousel-control-prev {
+	left: -10%;
+}
+.carousel-control-next {
+	right: -10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(1);
+}
+
 /* ------- Responsiveness ------- */
 /* Media Queries */
 @media screen and (max-width: 1270px) {
@@ -440,6 +503,31 @@ header {
 	.plan {
 		padding: 3rem 7rem 4rem;
 	}
+	/* testimonials */
+	.testimonial-card {
+		grid-template-areas: "t-content";
+		gap: 0;
+		margin: 4rem 3rem;
+	}
+	.testimonial-content i {
+		position: absolute;
+		top: 3rem;
+		left: 4.5rem;
+		font-size: 2.5vw;
+		padding: 0.75rem;
+		border-radius: 0.5rem;
+		margin: 0;
+	}
+	.review {
+		margin-top: 4rem;
+	}
+	.reviewer-image {
+		position: absolute;
+		width: 9.5vw;
+		height: 9.5vw;
+		top: 2rem;
+		right: 5rem;
+	}
 }
 @media screen and (max-width: 768px) {
 	/* GENERAL CSS */
@@ -524,6 +612,10 @@ header {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+	/* testimonials */
+	.review {
+		margin-top: 3rem;
+	}
 }
 @media screen and (max-width: 576px) {
 	/* header */
@@ -566,5 +658,10 @@ header {
 	/* about */
 	.course-list li {
 		flex-direction: column;
+	}
+	/* testimonials */
+	.reviewer-image {
+		top: 3rem;
+		right: 5rem;
 	}
 }
