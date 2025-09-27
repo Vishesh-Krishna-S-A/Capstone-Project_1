@@ -465,6 +465,14 @@ header {
 .inquiry-form textarea {
 	height: 10rem !important;
 }
+/* footer */
+footer {
+	background-color: var(--dark-bg-color);
+	color: var(--bg-color);
+}
+footer span {
+	color: var(--primary-color);
+}
 
 /* ------- Responsiveness ------- */
 /* Media Queries */
