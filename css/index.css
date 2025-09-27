@@ -425,6 +425,47 @@ header {
 	transition: all 0.3s ease-in-out;
 }
 
+/* inquiry form */
+.inquiry {
+	position: relative;
+}
+.inquiry-form {
+	margin: 0 auto;
+	width: 70%;
+}
+.inquiry-form input + label {
+	position: absolute;
+	left: 5%;
+	color: #a5a5a5;
+}
+.inquiry-form textarea + label {
+	color: #a5a5a5;
+}
+.inquiry-form input,
+.inquiry-form input:focus,
+.inquiry-form textarea,
+.inquiry-form textarea:focus {
+	background-color: #efefef;
+	border: none;
+}
+.inquiry-form input:focus + label {
+	display: inline;
+	background-color: var(--bg-color);
+	color: var(--primary-color);
+	border-radius: 0.5rem;
+	position: absolute;
+	top: 19%;
+	left: 5%;
+	height: 1.5rem;
+	padding: 0 0.15rem;
+}
+.inquiry-form textarea:focus + label {
+	color: var(--primary-color);
+}
+.inquiry-form textarea {
+	height: 10rem !important;
+}
+
 /* ------- Responsiveness ------- */
 /* Media Queries */
 @media screen and (max-width: 1270px) {
@@ -493,6 +534,37 @@ header {
 	.btn-submit:hover {
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+	/* contact */
+	.contact {
+		padding-bottom: 0;
+	}
+	.contact-cards {
+		position: relative; /* ✅ back to normal flow */
+		top: auto;
+		left: auto;
+		transform: none;
+		margin-top: 1.5rem; /* some spacing below the map */
+		flex-direction: column; /* stack vertically for smaller screens */
+		align-items: center;
+		gap: 4rem;
+	}
+	.contact-info {
+		width: 70%;
+		min-width: 22.5rem;
+	}
+	/* inquiry form */
+	.inquiry {
+		padding-top: 0;
+	}
+	.inquiry-form {
+		width: 80%;
+	}
+	.inquiry-form input + label {
+		left: 6.5%;
+	}
+	.inquiry-form input:focus + label {
+		left: 6.5%;
 	}
 }
 @media screen and (max-width: 992px) {
@@ -589,20 +661,12 @@ header {
 		top: 2rem;
 		right: 5rem;
 	}
-	/* contact */
-	.contact-cards {
-		position: relative; /* ✅ back to normal flow */
-		top: auto;
-		left: auto;
-		transform: none;
-		margin-top: 1.5rem; /* some spacing below the map */
-		flex-direction: column; /* stack vertically for smaller screens */
-		align-items: center;
-		gap: 4rem;
+	/* inquiry form */
+	.inquiry-form input + label {
+		left: 8%;
 	}
-	.contact-info {
-		width: 70%;
-		min-width: 22.5rem;
+	.inquiry-form input:focus + label {
+		left: 8%;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -692,8 +756,15 @@ header {
 	.review {
 		margin-top: 3rem;
 	}
+	/* inquiry form */
+	.inquiry-form input + label {
+		left: 4.5%;
+	}
+	.inquiry-form input:focus + label {
+		left: 5%;
+	}
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 557px) {
 	/* header */
 	.navlist {
 		display: none;
